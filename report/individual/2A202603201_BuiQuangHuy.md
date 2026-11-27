@@ -58,10 +58,10 @@ Nguyên nhân ghi là **giả thuyết**. Frame mượn thì ghi rõ nguồn: ta
 
 | Hiện tượng                           | Frame / tên ảnh / nguồn | Nguyên nhân (giả thuyết) | Thấy gì trên point cloud | Hệ quả khi gán (theo guideline) |
 | ------------------------------------ | ----------------------- | ------------------------ | ------------------------ | ------------------------------- |
-| 1. Bóng che                          | s01f23 / `t4-1-bong-che` / task của tôi |                          |                          |                                 |
-| 2. Thưa ở xa                         | s01f55 / `t4-2-thua-o-xa` / task của tôi |                          |                          |                                 |
-| 3. Phản xạ thấp / ít điểm bất thường | s01f55 / `t4-3-phan-xa-thap` / task của tôi |                          |                          |                                 |
-| 4. Điểm lạ                           | s01f55 / `t4-4-diem-la` / task của tôi |                          |                          |                                 |
+| 1. Bóng che | s01f23 / `t4-1-bong-che` / task của tôi | Có vật thể khác nằm phía trước che khuất một phần vật thể cần gán nhãn. | Một phần vật thể có điểm LiDAR, phần phía sau bị thiếu điểm hoặc bị che hoàn toàn; đám mây điểm bị gián đoạn. | Chỉ gán phần hình học quan sát được; không tự suy đoán hoặc mở rộng cuboid bao phủ phần bị che khuất nếu không có đủ căn cứ. |
+| 2. Thưa ở xa | s01f55 / `t4-2-thua-o-xa` / task của tôi | Mật độ điểm giảm theo khoảng cách do giới hạn góc quét và độ phân giải của cảm biến LiDAR. | Vật thể ở xa chỉ có ít điểm, các điểm phân bố rời rạc, đường viền và hình dạng không rõ ràng. | Khó xác định chính xác kích thước và ranh giới vật thể; chỉ gán khi đủ căn cứ nhận diện, tránh tạo cuboid quá lớn hoặc sai vị trí. |
+| 3. Phản xạ thấp / ít điểm bất thường | s01f55 / `t4-3-phan-xa-thap` / task của tôi | Bề mặt vật thể có thể phản xạ tia LiDAR yếu, khiến cảm biến thu nhận được ít tín hiệu phản hồi. | Một số vùng trên vật thể có rất ít điểm hoặc gần như mất điểm, tạo thành những khoảng trống bất thường trong point cloud. | Không nhầm vùng thiếu điểm với ranh giới thực của vật thể; cần đối chiếu ảnh camera và các điểm lân cận trước khi xác định cuboid. |
+| 4. Điểm lạ | s01f55 / `t4-4-diem-la` / task của tôi | Có thể do nhiễu cảm biến, phản xạ đa đường hoặc các tia LiDAR phản hồi sai lệch. | Xuất hiện những điểm đơn lẻ hoặc cụm điểm nằm tách biệt khỏi bề mặt và hình dạng thông thường của vật thể. | Không dựa vào điểm nhiễu để mở rộng cuboid hoặc xác định kích thước vật thể; bỏ qua điểm không đáng tin cậy theo guideline. |
 
 ## 5. Số đo cuboid của tôi (Bước 5)
 
