@@ -58,10 +58,10 @@ Nguyên nhân ghi là **giả thuyết**. Frame mượn thì ghi rõ nguồn: ta
 
 | Hiện tượng                           | Frame / tên ảnh / nguồn | Nguyên nhân (giả thuyết) | Thấy gì trên point cloud | Hệ quả khi gán (theo guideline) |
 | ------------------------------------ | ----------------------- | ------------------------ | ------------------------ | ------------------------------- |
-| 1. Bóng che                          |                         |                          |                          |                                 |
-| 2. Thưa ở xa                         |                         |                          |                          |                                 |
-| 3. Phản xạ thấp / ít điểm bất thường |                         |                          |                          |                                 |
-| 4. Điểm lạ                           |                         |                          |                          |                                 |
+| 1. Bóng che                          | s01f23 / `t4-1-bong-che` / task của tôi |                          |                          |                                 |
+| 2. Thưa ở xa                         | s01f55 / `t4-2-thua-o-xa` / task của tôi |                          |                          |                                 |
+| 3. Phản xạ thấp / ít điểm bất thường | s01f55 / `t4-3-phan-xa-thap` / task của tôi |                          |                          |                                 |
+| 4. Điểm lạ                           | s01f55 / `t4-4-diem-la` / task của tôi |                          |                          |                                 |
 
 ## 5. Số đo cuboid của tôi (Bước 5)
 
